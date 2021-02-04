@@ -1,0 +1,24 @@
+
+Model:
+
+priority: index,lable,color
+
+warning: index,reviewTask,content,asin,sender,date,createdDate
+delete: index,reviewTask,
+
+warning: index,reviewTask,content,asin,sender,date,createdDate
+delete: index,reviewTask,
+
+reviewPlaning:  index, asin, planReviewCount,note,operator,createdDate
+
+reviewTask:     id, reviewPlaning,count,asin,url,priority,createdDate
+
+reviewContent:     index, reviewTask,reviewStar,reviewTitle,reviewDescription,reiewImage,operator,createdDate
+
+postInfo:       index, reviewTask,seller,buyer, reviewContent,orderNumber,postDate,postBy,
+
+seller:         index, sellerName,note,description
+buyer:          index, buyerID, amzBuyerID,note,description
+
+
+reviewDetail: id, marketPlace,asin, seller,buyer, reviewInfo,orderNumber,postDate,postBy

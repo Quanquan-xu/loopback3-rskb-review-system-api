@@ -1,0 +1,51 @@
+{
+  "name": "Buyer",
+  "plural": "Buyers",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "index": {
+      "type": "number"
+    },
+    "buyerID": {
+      "type": "string",
+      "required": true
+    },
+    "amzBuyerID": {
+      "type": "string",
+      "required": true
+    },
+    "status": {
+      "type": "boolean",
+      "default": false
+    },
+    "note": {
+      "type": "string"
+    },
+    "manager":{
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "errorCode": {
+      "type": "number"
+    },
+    "createdDate": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "reviews": {
+      "type": "hasMany",
+      "model": "PostInfo",
+      "foreignKey": "buyer"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,42 @@
+{
+  "name": "ReviewPlaning",
+  "plural": "ReviewPlanings",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "index": {
+      "type": "number"
+    },
+    "asin": {
+      "type": "string",
+      "required": true
+    },
+    "planReviewCount": {
+      "type": "number",
+      "required": true
+    },
+    "note": {
+      "type": "string"
+    },
+    "operator": {
+      "type": "string"
+    },
+    "createdDate": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "reviewTasks": {
+      "type": "hasMany",
+      "model": "ReviewTask",
+      "foreignKey": "reviewPlanIndex",
+      "primaryKey": "index"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

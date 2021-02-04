@@ -1,0 +1,62 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ReviewPlaning": {
+    "dataSource": "db",
+    "public": true
+  },
+  "ReviewTask": {
+    "dataSource": "db",
+    "public": true
+  },
+  "ReviewComment": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Seller": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Buyer": {
+    "dataSource": "db",
+    "public": true
+  },
+  "PostInfo": {
+    "dataSource": "db",
+    "public": true
+  }
+}

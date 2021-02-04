@@ -1,0 +1,34 @@
+{
+  "name": "Seller",
+  "plural": "Sellers",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "index": {
+      "type": "number"
+    },
+    "sellerName": {
+      "type": "string",
+      "required": true
+    },
+    "note": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "reviews": {
+      "type": "hasMany",
+      "model": "PostInfo",
+      "foreignKey": "seller"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
