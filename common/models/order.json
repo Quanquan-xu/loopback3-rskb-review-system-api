@@ -1,0 +1,81 @@
+{
+  "name": "Order",
+  "plural": "Orders",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "required": true
+    },
+    "plan": {
+      "type": "number",
+      "required": true
+    },
+    "buyer": {
+      "type": "number"
+    },
+    "seller": {
+      "type": "number"
+    },
+    "orderNumber": {
+      "type": "string"
+    },
+    "price": {
+      "type": "number"
+    },
+    "orderedDate": {
+      "type": "date"
+    },
+    "postDate": {
+      "type": "date"
+    },
+    "postBy": {
+      "type": "string"
+    },
+    "diabled": {
+      "type": "boolean"
+    },
+    "diabledDate": {
+      "type": "date"
+    },
+    "note": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "status": {
+      "type": "boolean"
+    },
+    "updatedDate": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "plan": {
+      "type": "belongsTo",
+      "model": "Plan",
+      "foreignKey": "plan",
+      "primaryKey": "id"
+    },
+    "seller": {
+      "type": "belongsTo",
+      "model": "Seller",
+      "foreignKey": "seller",
+      "primaryKey": "id"
+    },
+    "buyer": {
+      "type": "belongsTo",
+      "model": "Buyer",
+      "foreignKey": "buyer",
+      "primaryKey": "id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,6 +1,6 @@
 {
-  "name": "Buyer",
-  "plural": "Buyers",
+  "name": "Review",
+  "plural": "Reviews",
   "base": "PersistedModel",
   "idInjection": false,
   "options": {
@@ -8,34 +8,39 @@
   },
   "properties": {
     "id": {
+      "type": "string",
+      "required": true
+    },
+    "priority": {
       "type": "number"
     },
-    "buyerID": {
+    "plan": {
       "type": "string",
       "required": true
     },
-    "amzBuyerID": {
-      "type": "string",
-      "required": true
+    "rating": {
+      "type": "number"
     },
-    "status": {
-      "type": "boolean",
-      "default": true
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
     },
     "note": {
       "type": "string"
     },
-    "manager": {
+    "message": {
       "type": "string"
     },
-    "description": {
+    "operator": {
       "type": "string"
     },
-    "errorCode": {
-      "type": "number"
-    },
-    "createdDate": {
-      "type": "date"
+    "status": {
+      "type": "boolean"
     },
     "updatedDate": {
       "type": "date"
@@ -43,10 +48,11 @@
   },
   "validations": [],
   "relations": {
-    "reviews": {
-      "type": "hasMany",
-      "model": "PostInfo",
-      "foreignKey": "buyerIndex"
+    "plan": {
+      "type": "belongsTo",
+      "model": "Plan",
+      "foreignKey": "plan",
+      "primaryKey": "id"
     }
   },
   "acls": [],

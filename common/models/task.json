@@ -1,0 +1,48 @@
+{
+  "name": "Task",
+  "plural": "Tasks",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "required": true
+    },
+    "plan": {
+      "type": "number",
+      "required": true
+    },
+    "reviewProgress": {
+      "type": "number"
+    },
+    "orderProgress": {
+      "type": "number"
+    },
+    "note": {
+      "type": "string"
+    },
+    "finish": {
+      "type": "boolean"
+    },
+    "status": {
+      "type": "boolean"
+    },
+    "updatedDate": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "plan": {
+      "type": "belongsTo",
+      "model": "Plan",
+      "foreignKey": "plan",
+      "primaryKey": "id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
