@@ -2,14 +2,11 @@
   "name": "Buyer",
   "plural": "Buyers",
   "base": "PersistedModel",
-  "idInjection": false,
+  "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "id": {
-      "type": "number"
-    },
     "buyerID": {
       "type": "string",
       "required": true
@@ -43,10 +40,10 @@
   },
   "validations": [],
   "relations": {
-    "reviews": {
+    "orders": {
       "type": "hasMany",
-      "model": "PostInfo",
-      "foreignKey": "buyerIndex"
+      "model": "Order",
+      "foreignKey": "buyer"
     }
   },
   "acls": [],

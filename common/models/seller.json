@@ -43,10 +43,10 @@
   },
   "validations": [],
   "relations": {
-    "reviews": {
+    "orders": {
       "type": "hasMany",
-      "model": "PostInfo",
-      "foreignKey": "sellerIndex"
+      "model": "Order",
+      "foreignKey": "seller"
     }
   },
   "acls": [],

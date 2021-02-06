@@ -9,7 +9,8 @@
   "properties": {
     "id": {
       "type": "string",
-      "required": true
+      "required": true,
+      "id":true
     },
     "plan": {
       "type": "number",
