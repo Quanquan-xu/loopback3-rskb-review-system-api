@@ -13,17 +13,17 @@ module.exports = function(Plan) {
         Array.from(Array(plan.planNumber).keys()).forEach((ele, index)=>{
             const taskID = plan.planID + "-" + plan.planNumber + "-" + (index + 1)
             plan.tasks.create({
-              id: taskID
+              taskID:taskID
             }, function(err, task) {
               if(err) return;
               console.log('Created task:', task);
               plan.orders.create({
-                  id:task.id
+                  taskID:task.taskID
                 },function(err, order){
                   if(err) return;
                   console.log('Created order:', order);
                   plan.reviews.create({
-                    id:order.id
+                    taskID:order.taskID
                   },function(err, review){
                     if(err) return;
                     console.log('Created comment:', review);
