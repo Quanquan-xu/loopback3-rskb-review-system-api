@@ -1,0 +1,43 @@
+{
+  "name": "ReviewTask",
+  "plural": "ReviewTasks",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "required": true
+    },
+    "count": {
+      "type": "string",
+      "required": true
+    },
+    "asin": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string"
+    },
+    "createdDate": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "reviewPlaning": {
+      "type": "belongsTo",
+      "model": "ReviewPlaning",
+      "foreignKey": "reviewPlanIndex",
+      "primaryKey": "id",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

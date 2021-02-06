@@ -1,47 +1,41 @@
 {
-  "name": "Task",
-  "plural": "Tasks",
+  "name": "ReviewPlaning",
+  "plural": "ReviewPlanings",
   "base": "PersistedModel",
   "idInjection": false,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "id": {
+    "index": {
+      "type": "number"
+    },
+    "asin": {
       "type": "string",
       "required": true,
       "id": true
     },
-    "plan": {
+    "planReviewCount": {
       "type": "number",
       "required": true
-    },
-    "reviewProgress": {
-      "type": "number"
-    },
-    "orderProgress": {
-      "type": "number"
     },
     "note": {
       "type": "string"
     },
-    "finish": {
-      "type": "boolean"
+    "operator": {
+      "type": "string"
     },
-    "status": {
-      "type": "boolean"
-    },
-    "updatedDate": {
+    "createdDate": {
       "type": "date"
     }
   },
   "validations": [],
   "relations": {
-    "plan": {
-      "type": "belongsTo",
-      "model": "Plan",
-      "foreignKey": "plan",
-      "primaryKey": "id"
+    "reviewTasks": {
+      "type": "hasMany",
+      "model": "ReviewTask",
+      "foreignKey": "reviewPlanIndex",
+      "primaryKey": "index"
     }
   },
   "acls": [],

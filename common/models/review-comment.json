@@ -1,6 +1,6 @@
 {
-  "name": "Buyer",
-  "plural": "Buyers",
+  "name": "ReviewComment",
+  "plural": "ReviewComments",
   "base": "PersistedModel",
   "idInjection": false,
   "options": {
@@ -10,29 +10,21 @@
     "index": {
       "type": "number"
     },
-    "buyerID": {
+    "reviewTaskID": {
       "type": "string",
       "required": true
     },
-    "amzBuyerID": {
-      "type": "string",
-      "required": true
-    },
-    "status": {
-      "type": "boolean",
-      "default": false
-    },
-    "note": {
-      "type": "string"
-    },
-    "manager":{
-      "type": "string"
-    },
-    "description": {
-      "type": "string"
-    },
-    "errorCode": {
+    "reviewRating": {
       "type": "number"
+    },
+    "reviewContent": {
+      "type": "string"
+    },
+    "reiewImage": {
+      "type": "string"
+    },
+    "operator": {
+      "type": "string"
     },
     "createdDate": {
       "type": "date"
@@ -40,10 +32,14 @@
   },
   "validations": [],
   "relations": {
-    "reviews": {
-      "type": "hasMany",
-      "model": "PostInfo",
-      "foreignKey": "buyer"
+    "reviewTask": {
+      "type": "hasOne",
+      "model": "ReviewTask",
+      "foreignKey": "id",
+      "primaryKey": "reviewTaskID",
+      "options": {
+        "nestRemoting": true
+      }
     }
   },
   "acls": [],

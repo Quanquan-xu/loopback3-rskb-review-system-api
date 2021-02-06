@@ -35,40 +35,28 @@
     "dataSource": "db",
     "public": false
   },
-  "Plan": {
-    "dataSource": "reviewsystem",
+  "ReviewPlaning": {
+    "dataSource": "db",
     "public": true
   },
-  "Task": {
-    "dataSource": "reviewsystem",
+  "ReviewTask": {
+    "dataSource": "db",
     "public": true
   },
-  "Review": {
-    "dataSource": "reviewsystem",
+  "ReviewComment": {
+    "dataSource": "db",
     "public": true
   },
   "Seller": {
-    "dataSource": "reviewsystem",
+    "dataSource": "db",
     "public": true
   },
   "Buyer": {
-    "dataSource": "reviewsystem",
+    "dataSource": "db",
     "public": true
   },
-  "Order": {
-    "dataSource": "reviewsystem",
-    "public": true
-  },
-  "Priority": {
-    "dataSource": "reviewsystem",
-    "public": true
-  },
-  "ReviewProgress": {
-    "dataSource": "reviewsystem",
-    "public": true
-  },
-  "OrderProgress": {
-    "dataSource": "reviewsystem",
+  "PostInfo": {
+    "dataSource": "db",
     "public": true
   }
 }
