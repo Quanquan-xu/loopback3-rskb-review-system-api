@@ -14,11 +14,31 @@
       "type": "string",
       "required": true
     },
+    "marketPlace": {
+      "type": "string",
+      "required": true
+    },
+    "status": {
+      "type": "boolean",
+      "default": true
+    },
     "note": {
+      "type": "string"
+    },
+    "manager": {
       "type": "string"
     },
     "description": {
       "type": "string"
+    },
+    "errorCode": {
+      "type": "number"
+    },
+    "createdDate": {
+      "type": "date"
+    },
+    "updatedDate": {
+      "type": "date"
     }
   },
   "validations": [],
@@ -26,7 +46,7 @@
     "reviews": {
       "type": "hasMany",
       "model": "PostInfo",
-      "foreignKey": "seller"
+      "foreignKey": "sellerIndex"
     }
   },
   "acls": [],

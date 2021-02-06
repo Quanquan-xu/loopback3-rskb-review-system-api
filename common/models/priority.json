@@ -1,0 +1,33 @@
+{
+  "name": "Priority",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number"
+    },
+    "code": {
+      "type": "number",
+      "required": true
+    },
+    "english": {
+      "type": "string",
+      "required": true
+    },
+    "chinese": {
+      "type": "string",
+      "required": true
+    },
+    "korean": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

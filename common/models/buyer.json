@@ -7,7 +7,7 @@
     "validateUpsert": true
   },
   "properties": {
-    "index": {
+    "id": {
       "type": "number"
     },
     "buyerID": {
@@ -20,12 +20,12 @@
     },
     "status": {
       "type": "boolean",
-      "default": false
+      "default": true
     },
     "note": {
       "type": "string"
     },
-    "manager":{
+    "manager": {
       "type": "string"
     },
     "description": {
@@ -36,6 +36,9 @@
     },
     "createdDate": {
       "type": "date"
+    },
+    "updatedDate": {
+      "type": "date"
     }
   },
   "validations": [],
@@ -43,7 +46,7 @@
     "reviews": {
       "type": "hasMany",
       "model": "PostInfo",
-      "foreignKey": "buyer"
+      "foreignKey": "buyerIndex"
     }
   },
   "acls": [],
