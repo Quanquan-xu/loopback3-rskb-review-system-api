@@ -8,8 +8,7 @@
   },
   "properties": {
     "id": {
-      "type": "number",
-      "id": true
+      "type": "number"
     },
     "planID": {
       "type": "string"

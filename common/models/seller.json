@@ -7,7 +7,7 @@
     "validateUpsert": true
   },
   "properties": {
-    "id": {
+    "index": {
       "type": "number"
     },
     "sellerName": {

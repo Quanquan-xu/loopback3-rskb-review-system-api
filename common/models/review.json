@@ -7,7 +7,7 @@
     "validateUpsert": true
   },
   "properties": {
-    "taskID": {
+    "id": {
       "type": "string",
       "required": true
     },
