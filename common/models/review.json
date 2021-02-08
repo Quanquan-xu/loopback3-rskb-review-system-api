@@ -54,6 +54,12 @@
       "model": "Plan",
       "foreignKey": "plan",
       "primaryKey": "id"
+    },
+    "priority": {
+      "type": "belongsTo",
+      "model": "Priority",
+      "foreignKey": "priority",
+      "primaryKey": "id"
     }
   },
   "acls": [],

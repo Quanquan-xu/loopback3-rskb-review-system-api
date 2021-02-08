@@ -1,10 +1,10 @@
 'use strict';
 
 module.exports = function(Plan) {
-    //Plan.app.models.
+    //Plan.app.models.Priority.
     Plan.beforeRemote('create', function(context, plan, next) {
       const asin = context.args.data.asin;
-      const planID = new Date().toLocaleString('en-GB', {year: 'numeric', month: '2-digit', day: '2-digit',hour:'2-digit',minute:'2-digit', second:'2-digit'}).replace(/(\d+)\/(\d+)\/(\d+), (\d+):(\d+):(\d+)/, '$3$1$2$4$5$6') + "-" + asin;
+      const planID = new Date().toLocaleString('en-GB', {year: 'numeric', month: '2-digit', day: '2-digit',hour:'2-digit',minute:'2-digit', second:'2-digit'}).replace(/(\d+)\/(\d+)\/(\d+), (\d+):(\d+):(\d+)/, '$3$2$1$4$5$6') + "-" + asin;
       context.args.data.planID = planID;
       //context.args.data.publisherId = context.req.accessToken.userId;
       next();

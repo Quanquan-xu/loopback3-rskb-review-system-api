@@ -42,6 +42,18 @@
       "model": "Plan",
       "foreignKey": "plan",
       "primaryKey": "id"
+    },
+    "reviewProgress": {
+      "type": "belongsTo",
+      "model": "ReviewProgress",
+      "foreignKey": "reviewProgress",
+      "primaryKey": "id"
+    },
+    "orderProgress": {
+      "type": "belongsTo",
+      "model": "OrderProgress",
+      "foreignKey": "orderProgress",
+      "primaryKey": "id"
     }
   },
   "acls": [],

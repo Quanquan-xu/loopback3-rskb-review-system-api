@@ -1,5 +1,6 @@
 {
   "name": "OrderProgress",
+  "plural": "OrderProgresses",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -24,7 +25,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "tasks": {
+      "type": "hasMany",
+      "model": "Task",
+      "foreignKey": "orderProgress"
+    }
+  },
   "acls": [],
   "methods": {}
 }

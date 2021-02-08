@@ -1,14 +1,12 @@
 {
   "name": "ReviewProgress",
+  "plural": "ReviewProgresses",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "id": {
-      "type": "number"
-    },
     "code": {
       "type": "number",
       "required": true
@@ -27,7 +25,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "tasks": {
+      "type": "hasMany",
+      "model": "Task",
+      "foreignKey": "reviewProgress"
+    }
+  },
   "acls": [],
   "methods": {}
 }

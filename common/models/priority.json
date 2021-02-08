@@ -1,14 +1,12 @@
 {
   "name": "Priority",
+  "plural": "Priorities",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "id": {
-      "type": "number"
-    },
     "code": {
       "type": "number",
       "required": true
@@ -27,7 +25,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "reviews": {
+      "type": "hasMany",
+      "model": "Review",
+      "foreignKey": "priority"
+    }
+  },
   "acls": [],
   "methods": {}
 }
