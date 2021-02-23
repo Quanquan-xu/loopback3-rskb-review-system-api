@@ -40,11 +40,6 @@
   },
   "validations": [],
   "relations": {
-    "orders": {
-      "type": "hasMany",
-      "model": "Order",
-      "foreignKey": "seller"
-    }
   },
   "acls": [],
   "methods": {}

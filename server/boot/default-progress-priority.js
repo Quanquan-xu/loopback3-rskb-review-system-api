@@ -1,9 +1,9 @@
 
 module.exports = function(app) {
-  let taskPriority =  app.models.Priority;
+  let orderPriority =  app.models.Priority;
   let reviewProgress =  app.models.ReviewProgress;
   let orderProgress =  app.models.OrderProgress;
-  const defualtTaskPriority = [
+  const defualtOrderPriority = [
     {code:1, english:"ORDER TASK CREATED DONE", chinese:"已创建订单任务", korean:"주문 작업 생성 완료"},
     {code:2, english:"ORDER NUMBER DONE", chinese:"已下单，待留评", korean:"주문 번호 완료"},
     {code:0, english:"ALL DONE", chinese:"已留评", korean:"모두 완료"},
@@ -20,33 +20,33 @@ module.exports = function(app) {
     {code:4, english:"ALL DONE", chinese:"已留评", korean:"모두 완료"},
     {code:5, english:"DELETED", chinese:"被删除", korean:"삭제됨"}
   ]
-  defualtTaskPriority.forEach( function(element) {
-      taskPriority.create(element, function(err, priorities) {
+  defualtOrderPriority.forEach( function(element) {
+      orderPriority.create(element, function(err, priority) {
       if (err){
         //console.log(err['messages'])
         //console.log(err['messages'])
       } else{
-        console.log('Created priorities:', priorities);
+        console.log('Created priorities:', priority);
       }
     });
   });
   defaultReviewProgress.forEach( function(element) {
-    reviewProgress.create(element, function(err, progresses) {
+    reviewProgress.create(element, function(err, progress) {
       if (err){
         //console.log(err['messages'])
         //console.log(err['messages'])
       } else{
-        console.log('Created review progresses:', progresses);
+        console.log('Created review progresses:', progress);
       }
     });
   });
   defualtOrderProgress.forEach( function(element) {
-    orderProgress.create(element, function(err, progresses) {
+    orderProgress.create(element, function(err, progress) {
       if (err){
         //console.log(err['messages'])
         //console.log(err['messages'])
       } else{
-        console.log('Created order progresses:', progresses);
+        console.log('Created order progresses:', progress);
       }
     });
   });

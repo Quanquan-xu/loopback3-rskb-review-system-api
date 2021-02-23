@@ -26,11 +26,6 @@
   },
   "validations": [],
   "relations": {
-    "tasks": {
-      "type": "hasMany",
-      "model": "Task",
-      "foreignKey": "reviewProgress"
-    }
   },
   "acls": [],
   "methods": {}

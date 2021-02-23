@@ -58,24 +58,6 @@
   },
   "validations": [],
   "relations": {
-    "plan": {
-      "type": "belongsTo",
-      "model": "Plan",
-      "foreignKey": "plan",
-      "primaryKey": "id"
-    },
-    "seller": {
-      "type": "belongsTo",
-      "model": "Seller",
-      "foreignKey": "seller",
-      "primaryKey": "id"
-    },
-    "buyer": {
-      "type": "belongsTo",
-      "model": "Buyer",
-      "foreignKey": "buyer",
-      "primaryKey": "id"
-    }
   },
   "acls": [],
   "methods": {}

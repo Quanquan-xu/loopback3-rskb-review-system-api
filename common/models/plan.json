@@ -37,24 +37,6 @@
   },
   "validations": [],
   "relations": {
-    "tasks": {
-      "type": "hasMany",
-      "model": "Task",
-      "foreignKey": "plan",
-      "primaryKey": "id"
-    },
-    "reviews": {
-      "type": "hasMany",
-      "model": "Review",
-      "foreignKey": "plan",
-      "primaryKey": "id"
-    },
-    "orders": {
-      "type": "hasMany",
-      "model": "Order",
-      "foreignKey": "plan",
-      "primaryKey": "id"
-    }
   },
   "acls": [],
   "methods": {}
